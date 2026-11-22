@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
+
+
 const nextConfig = {
-  output: 'export',
-  basePath: '/maze_algo'
-  images: { unoptimized: true },
+  output: 'export',            // вместо сервера — экспорт статики в папку out/
+  basePath: '/maze_algo',       
+  images: { unoptimized: true }, // оптимизация картинок требует сервера — отключаем
+  trailingSlash: true,         // чтобы навигация по Pages не отдавала 404
 };
-
-module.exports = nextConfig;
-
 export default nextConfig;
